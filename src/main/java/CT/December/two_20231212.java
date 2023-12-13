@@ -10,7 +10,6 @@ class two_20231212 {
         return answer;
     }
 
-
     public static void main(String[] args){
         two_20231212 T = new two_20231212();
         Scanner kb = new Scanner (System.in);
