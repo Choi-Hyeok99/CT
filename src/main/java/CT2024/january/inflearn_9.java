@@ -7,7 +7,7 @@ import java.util.Scanner;
 /* 문자열의 길이는 100을 넘지 않습니다. */
 /* g0en2T0s8eSoft */
 
-class inplearn_9 {
+class inflearn_9 {
     public int solution(String s){
         int answer = 0;
         for( char x : s.toCharArray()){
@@ -16,7 +16,7 @@ class inplearn_9 {
     return answer;
 }
 public static void main(String[] args){
-    inplearn_9 T = new inplearn_9();
+    inflearn_9 T = new inflearn_9();
     Scanner kb = new Scanner(System.in);
     String str = kb.next();
     System.out.print(T.solution(str));
