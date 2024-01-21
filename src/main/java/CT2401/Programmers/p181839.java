@@ -34,7 +34,7 @@ a	b	result
 
 
  */
-class p18139 {
+class p181839 {
     public int solution(int a, int b) {
         int answer = 0;
         if(a%2==1 && b%2==1){
