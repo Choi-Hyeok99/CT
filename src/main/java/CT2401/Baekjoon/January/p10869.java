@@ -1,4 +1,4 @@
-package CT2401.Baekjoon;
+package CT2401.Baekjoon.January;
 
 import java.util.Scanner;
 
