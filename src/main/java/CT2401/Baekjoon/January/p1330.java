@@ -33,6 +33,7 @@ public class p1330 {
             System.out.println("<");
         } else if ( A == B){
             System.out.println("==");
+
         }
     }
 }
