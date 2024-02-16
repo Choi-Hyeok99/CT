@@ -1,4 +1,4 @@
-package CT.Baekjoon.February;
+package CT.Baekjoon.Sequence;
 
 /*
 1.문제

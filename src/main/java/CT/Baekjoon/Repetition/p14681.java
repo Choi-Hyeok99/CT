@@ -1,4 +1,4 @@
-package CT.Baekjoon.February;
+package CT.Baekjoon.Repetition;
 
 import java.util.Scanner;
 

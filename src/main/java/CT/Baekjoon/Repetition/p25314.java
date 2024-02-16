@@ -1,4 +1,4 @@
-package CT.Baekjoon.February;
+package CT.Baekjoon.Repetition;
 
 /*
 2.입력
