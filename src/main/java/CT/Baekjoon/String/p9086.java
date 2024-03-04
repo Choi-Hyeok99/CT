@@ -25,9 +25,11 @@ public class p9086 {
 
         for(int i =0; i<T; i++){
 
+
             String c = sc.next();
             System.out.print(c.charAt(0));
             System.out.println(c.charAt(c.length()-1));
+
         }
     }
 }
