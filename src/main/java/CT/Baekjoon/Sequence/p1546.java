@@ -20,5 +20,6 @@ public class p1546 {
         }
         sc.close();
         System.out.println(((sum/max)*100)/M);
+
     }
 }
