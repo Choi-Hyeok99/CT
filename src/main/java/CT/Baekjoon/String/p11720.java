@@ -11,9 +11,24 @@ N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출
 입력으로 주어진 숫자 N개의 합을 출력한다.
 */
 
+import java.util.Scanner;
+
 public class p11720 {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 
+        int N = sc.nextInt();
+        String str = sc.next();
+        int sum = 0;
+
+        sc.close();
+
+        for(int i=0; i<N; i++){
+
+            sum +=str.charAt(i) - '0';
+
+        }
+        System.out.println(sum);
     }
 }
