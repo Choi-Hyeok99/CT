@@ -23,8 +23,11 @@ public class priorityQueue {
         }
     }
  */
+
+
  // 2. 정렬 전략 설정 예제 1
  // 숫자 10개를 입력받아 오름차순으로 정렬하되, 홀수가 짝수보다 우선순위가 높다고 가정
+/*
 public class priorityQueue{
     public static void main(String[] args) {
 
@@ -61,5 +64,59 @@ public class priorityQueue{
         }
     }
 }
+ */
 
+// 3.정렬 전략 설정 예제 2
+// Integer 타입만을 받는 Priority Queue가 아닌 (Integer, Integer) 타입으로 받고, 첫번째 인자를 기준으로 정렬하는 예제
+public class priorityQueue{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        PriorityQueue<MyFormat> pq = new PriorityQueue<>();
+        System.out.println("입력 x y : ");
+        for(int i = 0 ; i < 5 ; i ++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            pq.add(new MyFormat(x, y));
+        }
+
+        System.out.println("출력 x y : ");
+        for(int i = 0 ; i < 5 ; i ++) {
+            MyFormat mf = pq.poll();
+            System.out.println(mf.x + " " + mf.y);
+        }
+    }
+    static class MyFormat implements Comparable<MyFormat>{
+        int x, y;
+
+        public MyFormat(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        // x를 기준으로 오름차순 정렬
+        @Override
+        public int compareTo(MyFormat o) {
+            return this.x - o.x;
+
+            /* EX )
+            입력 x y :
+            3 7
+            4 1
+            2 8
+            8 6
+            4 0
+             */
+            /*
+            Ex )
+            출력 x y :
+            2 8
+            3 7
+            4 1
+            4 0
+            8 6
+
+            */
+        }
+    }
+}
