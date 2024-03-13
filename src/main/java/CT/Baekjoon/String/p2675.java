@@ -1,5 +1,7 @@
 package CT.Baekjoon.String;
 
+import java.util.Scanner;
+
 /*
 1.문제
 문자열 S를 입력받은 후에, 각 문자를 R번 반복해 새 문자열 P를 만든 후 출력하는 프로그램을 작성하시오.
@@ -17,7 +19,21 @@ QR Code "alphanumeric" 문자는 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\$%*+-./: �
 public class p2675 {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 
+        int n = sc.nextInt();
 
+        for(int i =0; i<n; i++){
+            int count = sc.nextInt();
+            String T = sc.next();
+
+            for(int j=0; j<T.length(); j++){
+                for(int k =0; k<count; k++){
+                    System.out.print(T.charAt(j));
+                }
+            }
+        }
+        sc.close();
+        System.out.println();
     }
 }
