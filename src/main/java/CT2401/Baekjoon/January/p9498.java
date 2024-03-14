@@ -1,6 +1,9 @@
 package CT2401.Baekjoon.January;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -15,17 +18,39 @@ import java.util.Scanner;
 
 
  */
-public class p9498 {
-    public static void main(String[] args) {
+//public class p9498 {
+//    public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int A = scanner.nextInt();
+//
+//        if(A>=90){System.out.println("A");}
+//        else if (A>=80){ System.out.println("B");}
+//        else if (A>=70){ System.out.println("C");}
+//        else if (A>=60){ System.out.println("D");}
+//        else System.out.println("F");
+//    }
+//}
 
-        Scanner scanner = new Scanner(System.in);
+public class p9498{
+    public static void main(String[] args) throws IOException {
 
-        int A = scanner.nextInt();
+        BufferedReader N = new BufferedReader(new InputStreamReader(System.in));
 
-        if(A>=90){System.out.println("A");}
-        else if (A>=80){ System.out.println("B");}
-        else if (A>=70){ System.out.println("C");}
-        else if (A>=60){ System.out.println("D");}
-        else System.out.println("F");
+        String[] S = N.readLine().split(" ");
+
+        int A = Integer.parseInt(S[0]);
+
+        if(A>=90){
+            System.out.println("A");
+        } else if (A>=80){
+            System.out.println("B");
+        } else if (A>=70){
+            System.out.println("C");
+        } else if (A>=60){
+            System.out.println("D");
+        } else
+            System.out.println("F");
     }
 }
