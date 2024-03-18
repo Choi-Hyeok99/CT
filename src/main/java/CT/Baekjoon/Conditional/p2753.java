@@ -1,5 +1,8 @@
 package CT.Baekjoon.Conditional;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -17,15 +20,32 @@ import java.util.Scanner;
 3.출력
 첫째 줄에 윤년이면 1, 아니면 0을 출력한다.
  */
-public class p2753 {
-    public static void main(String[] args) {
+//public class p2753 {
+//    public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        int A = scanner.nextInt();
+//
+//        if( A % 4  == 0 && A % 100 != 0) {
+//            System.out.println(1);
+//
+//        } else if (A % 400 == 0) {
+//            System.out.println(1);
+//        } else {
+//            System.out.println(0);
+//        }
+//    }
+//}
 
-        Scanner scanner = new Scanner(System.in);
-        int A = scanner.nextInt();
+public class p2753{
+    public static void main(String[] args) throws IOException {
 
-        if( A % 4  == 0 && A % 100 != 0) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int A = Integer.parseInt(br.readLine());
+
+        if (A % 4 == 0 && A % 100 != 0) {
             System.out.println(1);
-
         } else if (A % 400 == 0) {
             System.out.println(1);
         } else {
