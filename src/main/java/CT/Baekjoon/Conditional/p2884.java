@@ -1,5 +1,8 @@
 package CT.Baekjoon.Conditional;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -26,23 +29,50 @@ import java.util.Scanner;
 3.출력
 첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. (입력과 같은 형태로 출력하면 된다.)
  */
-public class p2884 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+//public class p2884 {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        int H = sc.nextInt();
+//        int m = sc.nextInt();
+//
+//        if(m < 45) {
+//            H --;                              // 45보다 작을시 시간을 -1
+//            m = 60-(45-m);
+//
+//            if(H < 0) {
+//                H = 23;                        // 0 보다 작을시 23시로
+//            }
+//            System.out.println(H + " " + m);
+//        } else {
+//            System.out.println(H + " " + (m - 45));
+//        }
+//    }
+//}
 
-        int H = sc.nextInt();
-        int m = sc.nextInt();
+public class p2884{
+    public static void main(String[] args) throws IOException {
 
-        if(m < 45) {
-            H --;                              // 45보다 작을시 시간을 -1
-            m = 60-(45-m);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-            if(H < 0) {
-                H = 23;                        // 0 보다 작을시 23시로
+        String[] input = br.readLine().split(" ");
+
+        int H = Integer.parseInt(input[0]);
+        int M = Integer.parseInt(input[1]);
+
+        if ( M < 45 ){
+
+            H--;
+            M = 60 - (45-M);
+
+            if(H<0){
+                H= 23;
             }
-            System.out.println(H + " " + m);
+            System.out.println(H + " " + M );
+
         } else {
-            System.out.println(H + " " + (m - 45));
+            System.out.println(H + " " + (M - 45 ) );
         }
+
     }
 }
