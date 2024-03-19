@@ -1,6 +1,9 @@
 package CT.Baekjoon.Conditional;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -22,26 +25,55 @@ import java.util.Scanner;
 3.출력
 첫째 줄에 게임의 상금을 출력 한다.
  */
-public class p2480 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int A = scanner.nextInt();
-        int B = scanner.nextInt();
-        int C = scanner.nextInt();
+//public class p2480 {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int A = scanner.nextInt();
+//        int B = scanner.nextInt();
+//        int C = scanner.nextInt();
+//
+//        int FC = 0;
+//
+//        if (A == B && A == C) {
+//            FC = 10000 + (A * 1000);
+//        } else if (A == B || A == C || B == C) {
+//            if (A == B || A == C) {
+//                FC = 1000 + (A * 100);
+//            } else { // B == C인 경우
+//                FC = 1000 + (B * 100);
+//            }
+//        } else {
+//            FC = Math.max(A, Math.max(B, C)) * 100;
+//        }
+//        System.out.println(FC);
+//    }
+//}
 
-        int FC = 0;
+public class p2480{
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] D = br.readLine().split(" ");
+
+        int A = Integer.parseInt(D[0]);
+        int B = Integer.parseInt(D[1]);
+        int C = Integer.parseInt(D[2]);
+
+        int result = 0;
+
 
         if (A == B && A == C) {
-            FC = 10000 + (A * 1000);
+            result = 10000 + (A * 1000);
         } else if (A == B || A == C || B == C) {
             if (A == B || A == C) {
-                FC = 1000 + (A * 100);
+                result = 1000 + (A * 100);
             } else { // B == C인 경우
-                FC = 1000 + (B * 100);
+                result = 1000 + (B * 100);
             }
         } else {
-            FC = Math.max(A, Math.max(B, C)) * 100;
-        }
-        System.out.println(FC);
+            result = Math.max(A, Math.max(B, C)) * 100;
+    }
+        System.out.println(result);
     }
 }
