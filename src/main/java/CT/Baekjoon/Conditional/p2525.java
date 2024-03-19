@@ -1,5 +1,8 @@
 package CT.Baekjoon.Conditional;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -20,24 +23,43 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 첫째 줄에 종료되는 시각의 시와 분을 공백을 사이에 두고 출력한다. (단, 시는 0부터 23까지의 정수, 분은 0부터 59까지의 정수이다.
  디지털 시계는 23시 59분에서 1분이 지나면 0시 0분이 된다.)
  */
-public class p2525 {
-    public static void main(String[] args) {
+//public class p2525 {
+//    public static void main(String[] args) {
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        int A = sc.nextInt();
+//        int B = sc.nextInt();
+//        int C = sc.nextInt();
+//
+//        int endA = A + ( B+C ) / 60 ;
+//        int endB = (B+C) % 60 ;
+//
+//        if ( endA >= 24){
+//            endA -= 24;
+//
+//        }
+//        System.out.println(endA + " " + endB);
+//    }
+//}
 
-        Scanner sc = new Scanner(System.in);
+public class p2525{
+    public static void main(String[] args) throws IOException {
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
-        int C = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int endA = A + ( B+C ) / 60 ;
+        String[] tr = br.readLine().split(" ");
+
+        int A = Integer.parseInt(tr[0]);
+        int B = Integer.parseInt(tr[1]);
+        int C = Integer.parseInt(br.readLine());
+
+        int endA = A + ( B + C ) / 60 ;
         int endB = (B+C) % 60 ;
 
-        if ( endA >= 24){
+        if (endA>= 24){
             endA -= 24;
-
         }
         System.out.println(endA + " " + endB);
-
-
     }
 }
