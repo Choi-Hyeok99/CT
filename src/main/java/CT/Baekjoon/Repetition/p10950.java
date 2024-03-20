@@ -13,12 +13,15 @@ package CT.Baekjoon.Repetition;
 각 테스트 케이스마다 A+B를 출력한다.
  */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
-
+/*
 public class p10950 {
     public static void main(String[] args) {
 
-        /* ( 1번 풀이 )
+         ( 1번 풀이 )
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();
 
@@ -47,7 +50,29 @@ public class p10950 {
 
         }
 
-         */
+
         }
 }
+    */
 
+ // * 3번 풀이
+
+public class p10950 {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int T = Integer.parseInt(br.readLine());
+
+        for ( int i = 0 ; i<T; i++ ){
+            String[] input = br.readLine().split(" ");
+
+            int A = Integer.parseInt(input[0]);
+            int B = Integer.parseInt(input[1]);
+
+            int sum = A + B;
+
+            System.out.println(" sum = " +  sum );
+        }
+    }
+}
