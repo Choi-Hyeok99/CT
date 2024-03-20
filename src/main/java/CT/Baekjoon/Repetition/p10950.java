@@ -31,6 +31,10 @@ public class p10950 {
             int B = scanner.nextInt();
             System.out.println(A+B);
 
+                 }
+                }
+            }
+
          */
 
         /* ( 2번 풀이 ) 효율이 더 좋음
