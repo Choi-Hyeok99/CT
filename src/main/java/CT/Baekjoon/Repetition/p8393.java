@@ -1,6 +1,9 @@
 package CT.Baekjoon.Repetition;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
@@ -13,20 +16,38 @@ n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성�
 3.출력
 1부터 n까지 합을 출력한다.
  */
-public class p8393 {
-    public static void main(String[] args) {
+//public class p8393 {
+//    public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int n = scanner.nextInt();
+//        int result = 0;
+//
+//
+//        for ( int i=0; i <= n ; i++){
+//
+//            result += i;
+//
+//        }
+//        System.out.println(result);
+//    }
+//}
 
-        Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        int result = 0;
+public class p8393{
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int sum = 0;
+        int n = Integer.parseInt(br.readLine()); // 사용자로부터 정수 입력 받기
 
 
-        for ( int i=0; i <= n ; i++){
+        for (int i = 1; i<=n; i++){
 
-            result += i;
-
+            sum+=i;
         }
-        System.out.println(result);
+        System.out.println(sum);
     }
 }
