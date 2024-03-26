@@ -13,6 +13,7 @@ public class p11718 {
 
         while((s=br.readLine())!=null) {
             System.out.println(s);
+
         }
         br.close();
 
