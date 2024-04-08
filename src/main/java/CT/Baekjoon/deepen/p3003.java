@@ -32,5 +32,6 @@ public class p3003 {
         System.out.print(knight + " ");
         System.out.print(pawn + " ");
 
+
     }
 }
