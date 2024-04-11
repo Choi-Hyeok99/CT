@@ -34,6 +34,7 @@ public class p2444 {
             for (int j = 1; j <= n-i; j++) {
                 sb.append(" ");
             }
+
             for (int j = 1; j <= 2*i-1; j++) {
                 sb.append("*");
             }
