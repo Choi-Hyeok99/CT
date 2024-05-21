@@ -1,7 +1,11 @@
 package CT.Baekjoon.Sequence;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+
 
 /*
 1.문제
@@ -15,24 +19,57 @@ import java.util.Scanner;
 
  */
 public class p10807 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // BufferedReader를 사용하여 사용자 입력을 받기 위한 설정
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Scanner sc = new Scanner(System.in);
-
+        // count 변수 초기화 (특정 수의 출현 횟수를 세기 위해 사용)
         int count = 0;
-        int N = sc.nextInt();
-        int arr[] = new int[N];
 
-        for ( int i = 0; i<N; i++){
-            arr[i] =sc.nextInt();
+        // 첫 번째 입력 줄에서 배열의 크기 N을 읽음
+        int N = Integer.parseInt(br.readLine());
+
+        // 크기가 N인 정수 배열 a를 생성
+        int[] a = new int[N];
+
+        // 두 번째 입력 줄에서 N개의 숫자를 공백으로 구분하여 읽음
+        String[] inputs = br.readLine().split(" ");
+
+        // inputs 배열에서 각 숫자를 정수로 변환하여 배열 a에 저장
+        for (int i = 0; i < a.length; i++) {
+            a[i] = Integer.parseInt(inputs[i]);
         }
-        int b = sc.nextInt();
 
-        for ( int j =0; j<arr.length; j++){
-            if(b== arr[j]){
-                count++;
+        // 세 번째 입력 줄에서 특정 숫자 b를 읽음
+        int b = Integer.parseInt(br.readLine());
+
+        // 배열 a를 순회하면서 b와 같은 값이 몇 번 등장하는지 세기
+        for (int j = 0; j < a.length; j++) {
+            if (b == a[j]) {
+                count++; // b와 같은 값이 발견되면 count를 증가
             }
         }
+
+        // b와 같은 값이 배열 a에 몇 번 등장했는지 출력
         System.out.println(count);
     }
 }
+
+//       Scanner 버전 (1)
+//        Scanner sc = new Scanner(System.in);
+//
+//        int count = 0;
+//        int N = sc.nextInt();
+//        int arr[] = new int[N];
+//
+//        for ( int i = 0; i<N; i++){
+//            arr[i] =sc.nextInt();
+//        }
+//        int b = sc.nextInt();
+//
+//        for ( int j =0; j<arr.length; j++){
+//            if(b== arr[j]){
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
