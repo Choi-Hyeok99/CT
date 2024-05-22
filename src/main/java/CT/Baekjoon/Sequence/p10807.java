@@ -50,6 +50,8 @@ public class p10807 {
             }
         }
 
+
+
         // b와 같은 값이 배열 a에 몇 번 등장했는지 출력
         System.out.println(count);
     }
