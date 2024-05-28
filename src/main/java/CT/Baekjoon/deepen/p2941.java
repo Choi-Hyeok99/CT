@@ -3,6 +3,7 @@ package CT.Baekjoon.deepen;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /*
 1.문제
@@ -24,19 +25,42 @@ dž는 무조건 하나의 알파벳으로 쓰이고, d와 ž가 분리된 것�
  */
 
 public class p2941 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String s = br.readLine();
-        String[] croatiaAlphabet = { "c=","c-","dz=","d-","lj","nj","s=","z="};
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        String[] croatia = { "c=", "c-" , "dz=" , "d-" , "lj", "nj", "s=" , "z="};
         int index = 0;
 
-        for (int i = 0; i<croatiaAlphabet.length; i++){
-            index = s.indexOf(croatiaAlphabet[i]);
-            if(index>=0){
-                s = s.replaceAll(croatiaAlphabet[i], "S");
+        for(int i=0; i< croatia.length; i++){
+            index =s.indexOf(croatia[i]);
+            if(index >= 0){
+                s = s.replaceAll(croatia[i],"S");
             }
         }
         System.out.println(s.length());
     }
 }
+
+
+
+
+
+  // BufferedReader 방식
+//    public static void main(String[] args) throws IOException {
+//
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        String s = br.readLine();
+//        String[] croatiaAlphabet = { "c=","c-","dz=","d-","lj","nj","s=","z="};
+//        int index = 0;
+//
+//        for (int i = 0; i<croatiaAlphabet.length; i++){
+//            index = s.indexOf(croatiaAlphabet[i]);
+//            if(index>=0){
+//                s = s.replaceAll(croatiaAlphabet[i], "S");
+//            }
+//        }
+//        System.out.println(s.length());
+//    }
+
