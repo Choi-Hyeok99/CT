@@ -12,9 +12,10 @@ public class Inflearn_1 {
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         char c = kb.next().charAt(0); // charAt 알아보기
-
         System.out.print(T.solution(str, c));
     }
+
+
     public int solution (String str , char t){
         int answer =0;
 
