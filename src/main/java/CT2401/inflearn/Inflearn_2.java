@@ -19,6 +19,7 @@ public class Inflearn_2 {
             if(x>=97 && x<=122) answer+= (char)(x-32);
             else answer+= (char)(x+32);
         }
+
         return answer;
 
 //        // 방법  1
