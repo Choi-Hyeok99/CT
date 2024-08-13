@@ -1,13 +1,5 @@
 package CT.Baekjoon.deepen;
 
-
-
-
-
-
-
-
-
 import java.util.Scanner;
 
 
