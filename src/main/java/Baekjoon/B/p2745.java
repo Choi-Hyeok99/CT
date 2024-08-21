@@ -36,12 +36,33 @@ public class p2745 {
 
         Scanner sc = new Scanner(System.in);
 
-        StringTokenizer st = new StringTokenizer(sc.nextLine());
-        String n = st.nextToken();
-        int b = Integer.parseInt(st.nextToken());
+//        StringTokenizer st = new StringTokenizer(sc.nextLine());
+//        String n = st.nextToken();
+//        int b = Integer.parseInt(st.nextToken());
+//
+//        System.out.println(Integer.parseInt(n,b));
 
-        System.out.println(Integer.parseInt(n,b));
+        // 시간이 너무 오래걸림
+        // 다른 코드 사용이 필요할듯
 
+        String n = sc.next();
+        int b = sc.nextInt();
 
+        int result = 0;
+        int power = 1; // 가중치 필수!
+
+        // 문자열의 끝에서부터 각 자리의 값을 계산
+
+        for(int i = n.length()-1; i>=0; i--){
+            char c = n.charAt(i);
+
+            if(c >= '0' && c<='9'){
+                result += (c - 0) * power;
+            } else if( c>= 'A' && c<= 'Z'){
+                result+= (c-'A' + 10) * power;
+            }
+            power*=b;
+        }
+        System.out.println(result);
     }
 }
