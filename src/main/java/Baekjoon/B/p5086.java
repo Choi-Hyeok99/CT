@@ -50,14 +50,5 @@ public class p5086 {
                 System.out.println("neither");
             }
         }
-
-
-
-
-
-
-
-
-
     }
 }
