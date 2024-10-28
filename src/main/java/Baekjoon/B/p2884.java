@@ -17,7 +17,7 @@ public class p2884 {
          * 범위 : 0<= H <= 23
          *       0<= M <= 59
          *
-         *       조건 :  설정 시간 - 45
+         *  조건 :  설정 시간 - 45
          */
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
