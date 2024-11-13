@@ -3,6 +3,7 @@ package Baekjoon.sparta.B;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * 1.문제
@@ -34,15 +35,29 @@ public class p2475 {
          * 1번 풀이
          */
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        String[] input = br.readLine().split(" ");
+//        int sum = 0;
+//
+//        for (String num : input){
+//            sum += Integer.parseInt(num) * Integer.parseInt(num);
+//        }
+//
+//        System.out.println(sum % 10);
 
-        String[] input = br.readLine().split(" ");
+        /**
+         * 2번 풀이
+         */
+
+        Scanner sc = new Scanner(System.in);
         int sum = 0;
 
-        for (String num : input){
-            sum += Integer.parseInt(num) * Integer.parseInt(num);
+        for (int i=0; i<5; i++){
+            int num = sc.nextInt();
+            sum += (int)Math.pow(num,2);
         }
+        System.out.println((sum % 10));
 
-        System.out.println(sum % 10);
     }
 }
