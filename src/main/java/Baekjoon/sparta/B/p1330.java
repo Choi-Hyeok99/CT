@@ -1,5 +1,8 @@
 package Baekjoon.sparta.B;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -24,25 +27,50 @@ import java.util.Scanner;
  * --------------------------------------------------------------------------------
  */
 public class p1330 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         /**
          * 1번 풀이
          */
 
+        //** 입력
+//        Scanner sc = new Scanner(System.in);
+//
+//        int A = sc.nextInt();
+//        int B = sc.nextInt();
+//
+//        // 조건( 출력  )
+//        if( A > B ){
+//            System.out.println(">");
+//        } else if ( A < B ){
+//            System.out.println("<");
+//            } else if ( A == B ){
+//            System.out.println("==");
+
+
+        /**
+         * 2번 풀이
+         */
+
         // 입력
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = br.readLine().split(" ");
+        int A = Integer.parseInt(input[0]);
+        int B = Integer.parseInt(input[1]);
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
+        int comparison = Integer.compare(A,B);
 
-        // 조건( 전략 )
-        if( A > B ){
-            System.out.println(">");
-        } else if ( A < B ){
-            System.out.println("<");
-            } else if ( A == B ){
-            System.out.println("==");
+        // 조건 ( 출력 )
+        switch (comparison){
+            case 1:
+                System.out.println(">");
+                break;
+            case -1:
+                System.out.println("<");
+                break;
+            case 0:
+                System.out.println("==");
+                break;
         }
     }
 }
