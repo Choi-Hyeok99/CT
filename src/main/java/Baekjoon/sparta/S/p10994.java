@@ -16,10 +16,10 @@ import java.util.Arrays;
 
 public class p10994 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int n = Integer.parseInt(bf.readLine());
-        char[][] star = print_star(n);
+        int n = Integer.parseInt(br.readLine());
+        char[][] star = star(n);
         //별리 그려져 있는 사각형 한변의 길이
         int size = (n-1)*4+1;
 
@@ -34,7 +34,7 @@ public class p10994 {
     }
 
     //재귀적으로 문제 해결
-    public static char[][] print_star(int num){
+    public static char[][] star(int num){
         //인자인 num에 따른 별이 그려져 있는 사각형 한변의 길이
         int size = (num-1)*4+1;
         char[][] star = new char[size][size];
@@ -51,7 +51,7 @@ public class p10994 {
         }
 
         //해당 사이즈의 사각형 안에 있는 별 찍기
-        char[][] pre_star = print_star(num-1);
+        char[][] pre_star = star(num-1);
         for(int i=0;i<size;i++) {
             for(int j=0;j<size;j++) {
                 //최외곽에 별찍기
