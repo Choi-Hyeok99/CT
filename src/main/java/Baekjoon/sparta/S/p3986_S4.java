@@ -12,30 +12,28 @@ public class p3986_S4 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int count = Integer.parseInt(br.readLine());
+        // 입력받을 단어의 개수
+        int wordCount = Integer.parseInt(br.readLine());
 
-        int result = 0;
+        int goodWordCount = 0;
 
-        for (int i = 0; i < count; i++) {
-            Stack<Character> st = new Stack<>();
-            String s = br.readLine();
-            for (int j = 0; j < s.length(); j++) {
+        for (int i = 0; i < wordCount; i++) {
+            Stack<Character> stack = new Stack<>();
+            String word = br.readLine();
 
-                char val = s.charAt(j);
-                if (st.isEmpty()) {
-                    st.push(val);
-                } else {
-                    if (st.peek() == val) {
-                        st.pop();
-                    } else {
-                        st.push(val);
-                    }
-                }
+            for (int j = 0; j < word.length(); j++) {
+
+                char currentChar = word.charAt(j);
+
+                if (stack.isEmpty() || stack.peek() != currentChar) {
+                    stack.push(currentChar);
+                } else stack.pop();
             }
-            if (st.empty()) {
-                result++;
+
+            if (stack.empty()) {
+                goodWordCount++;
             }
         }
-        System.out.println(result);
+        System.out.println(goodWordCount);
     }
 }
