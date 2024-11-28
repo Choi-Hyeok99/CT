@@ -1,4 +1,3 @@
-
 import java.io.*;
 
 /**
@@ -26,7 +25,7 @@ public class Main {
             }
 
             // 자릿수 합을 문자열로 변환
-            X = String.valueOf(sum);
+            X = Integer.toString(sum);
             // 변환 횟수 증가
             count++;
         }
