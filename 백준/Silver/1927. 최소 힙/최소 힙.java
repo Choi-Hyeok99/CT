@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -45,10 +44,11 @@ import java.util.*;
  */
 
 
-public class Main {
+public class Main  {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         // 연산횟수 N
         int N = Integer.parseInt(br.readLine());
@@ -62,13 +62,15 @@ public class Main {
 
             if(x == 0){ // 입력 값이 0인 경우
                 if(pq.isEmpty()) {
-                    System.out.println(0); // 큐가 비어있으면 0 출력
+                    bw.write("0\n");
                 } else {
-                    System.out.println(pq.poll()); // 가장 작은 값 출력하고 제거
+                    bw.write(pq.poll()+ "\n");
                 }
             } else {
                 pq.add(x);
             }
         }
+        bw.flush();
+        bw.close();
     }
 }
